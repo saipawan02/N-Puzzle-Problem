@@ -56,7 +56,7 @@ class TileProblem_AI {
        int[][] goal =  new int[t][t];
        for(int i=0;i<t;i++){
            for(int j=0;j<t;j++){
-               goal[i][j]=sc.nextInt();//g[k++];
+               goal[i][j]=sc.nextInt();
            }
        }
         
@@ -97,7 +97,7 @@ class TileProblem_AI {
             System.out.println("");
             
             while(true){
-                state s = findMin(frontier);//frontier.remove(0);  //also check collenctions.sort();
+                state s = findMin(frontier);
                 tiles = s.getState();
                 cost=s.getcost();
                 if(!isDublicate(tiles,explored,cost)){
@@ -185,8 +185,6 @@ class TileProblem_AI {
                     }
                 }
             }
-            
-            //Collections.sort(frontier);
         }
     }
     
