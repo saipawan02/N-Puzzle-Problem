@@ -317,7 +317,7 @@ class TileProblem_AI {
     
 }
 
-class state implements Comparable<state>{
+class state{
     int cost;
     int k;
     int tiles[][] ;
@@ -339,20 +339,5 @@ class state implements Comparable<state>{
     }
     int getcost(){
         return cost-k;
-    }
-    
-    @Override
-    public int compareTo(state s){
-         if(this.cost==s.cost)
-             if((this.cost-this.k)==(s.cost-s.k))
-                return 0;
-             else if((this.cost-this.k)>(s.cost-s.k))
-                 return 1;
-             else
-                 return -1;
-         else if(this.cost>s.cost)  
-            return 1;  
-         else  
-            return -1;
     }
 }
