@@ -24,19 +24,13 @@ class TileProblem_AI {
         t = (int)Math.sqrt(num);
         System.out.println(t);
         System.out.println("enter the Initial state: ");
-//        int[][] tiles =  new int[t][t];
-//        for(int i=0;i<t;i++){
-//            for(int j=0;j<t;j++){
-//                int c=sc.nextInt();
-//                tiles[i][j]= c;
-//            }
-//        }
-        int[][] tiles = {{1,3,5,7},{2,4,6,8},{9,11,13,15},{10,12,14,0}}; 
-//        int[][] tiles ={{1,5,9,13},
-//                        {2,6,10,14},
-//                        {3,7,11,15},
-//                        {4,8,12,0}};
-//        int[][] tiles = {{2,8,3},{1,6,4},{7,0,5}};
+       int[][] tiles =  new int[t][t];
+       for(int i=0;i<t;i++){
+           for(int j=0;j<t;j++){
+               int c=sc.nextInt();
+               tiles[i][j]= c;
+           }
+       }
 
         
         int par_init = 0;boolean check;
@@ -58,21 +52,13 @@ class TileProblem_AI {
             }
         }
         System.out.println(par_init);
-        System.out.println("select the goal state");
-//        int g[] = {1,2,3,8,0,4,7,6,5}; 
-//        int[][] goal =  new int[t][t];
-//        for(int i=0;i<t;i++){
-//            for(int j=0;j<t;j++){
-//                goal[i][j]=sc.nextInt();//g[k++];
-//            }
-//        }
-
-        int[][] goal = {{1,2,3,4},
-                        {5,6,7,8},
-                        {9,10,11,12},
-                        {13,14,15,0}};
-
-//        int[][] goal = {{1,2,3},{8,0,4},{7,6,5}};
+        System.out.println("select the goal state"); 
+       int[][] goal =  new int[t][t];
+       for(int i=0;i<t;i++){
+           for(int j=0;j<t;j++){
+               goal[i][j]=sc.nextInt();//g[k++];
+           }
+       }
         
         int par_goal = 0;
         for(int i=0;i<t;i++){
@@ -372,31 +358,3 @@ class state implements Comparable<state>{
             return -1;
     }
 }
-
-/*
-enter the Initial state: 
-5 1 3 4
-2 0 7 8
-9 6 10 12
-13 14 11 15
-12
-select the goal state
-1 2 3 4
-5 6 7 8
-9 10 11 12
-13 14 15 0
-*/
-
-/*
-        int[][] tiles = {{2,8,3},{1,6,4},{7,0,5}};
-        int[][] tiles ={{2,8,3,9},
-                        {1,6,4,11},
-                        {7,0,5,13},
-                        {10,12,14,15}};
-
-        int[][] goal = {{1,2,3,4},
-                        {12,13,14,5},
-                        {11,0,15,6},
-                        {10,9,8,7}};
-        int[][] goal = {{1,2,3},{8,0,4},{7,6,5}};
-*/
